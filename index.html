@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Math Quiz Challenge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container" id="menu">
+  <h1>🎮 Math Quiz Challenge</h1>
+  <button onclick="pilihLevel('easy')">Easy</button>
+  <button onclick="pilihLevel('normal')">Normal</button>
+  <button onclick="pilihLevel('hard')">Hard</button>
+</div>
+
+<div class="container hidden" id="game">
+  <h2 id="level"></h2>
+
+  <div class="info">
+    <span>Score: <b id="score">0</b></span>
+    <span>Waktu: <b id="timer">15</b>s</span>
+  </div>
+
+  <p id="pertanyaan"></p>
+  <div id="pilihan"></div>
+  <p id="hasil"></p>
+</div>
+
+<footer>
+  <p>© 2026 Math Quiz Challenge</p>
+  <p>Developed by <b>WOF OFFICIAL</b></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
