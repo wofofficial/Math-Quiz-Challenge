@@ -2,34 +2,48 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Math Quiz Challenge</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Quiz Ultimate</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container" id="menu">
-  <h1>🎮 Math Quiz Challenge</h1>
-  <button onclick="pilihLevel('easy')">Easy</button>
-  <button onclick="pilihLevel('normal')">Normal</button>
-  <button onclick="pilihLevel('hard')">Hard</button>
+<div id="startScreen" class="screen active">
+  <h1>🎮 Math Quiz Ultimate</h1>
+  <button onclick="showLevel()">▶️ Play</button>
 </div>
 
-<div class="container hidden" id="game">
-  <h2 id="level"></h2>
+<div id="levelScreen" class="screen">
+  <h2>Pilih Level</h2>
+  <button onclick="startGame('easy')">Easy</button>
+  <button onclick="startGame('normal')">Normal</button>
+  <button onclick="startGame('hard')">Hard</button>
+</div>
 
-  <div class="info">
+<div id="gameScreen" class="screen">
+  <div class="top">
     <span>Score: <b id="score">0</b></span>
-    <span>Waktu: <b id="timer">15</b>s</span>
+    <span id="levelText"></span>
   </div>
 
-  <p id="pertanyaan"></p>
-  <div id="pilihan"></div>
-  <p id="hasil"></p>
+  <div class="timer-bar">
+    <div id="bar"></div>
+  </div>
+
+  <p id="question"></p>
+  <div id="answers"></div>
+  <p id="status"></p>
+</div>
+
+<div id="endScreen" class="screen">
+  <h1>🎉 Selesai!</h1>
+  <p>Score kamu: <span id="finalScore"></span></p>
+  <button onclick="location.reload()">Main Lagi</button>
 </div>
 
 <footer>
-  <p>© 2026 Math Quiz Challenge</p>
-  <p>Developed by <b>WOF OFFICIAL</b></p>
+  <p>© 2026 Math Quiz Ultimate</p>
+  <p>Developed by <b>Gregorius William Wahyudi</b></p>
 </footer>
 
 <script src="script.js"></script>
